@@ -3,14 +3,14 @@ const path = require('path');
 module.exports = {
 	mode: "development",
 	entry: {
-		main: './src/main.ts'
+		main: './src/main.tsx'
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: '[name]'.js
 	},
 	resolve: {
-		extensions: ['ts', '.js']
+		extensions: ['ts','.tsx','.js','.json']
 	},
 	devServer: {
 		contentBase: path.join(__dirname,'dist'),
@@ -20,8 +20,13 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.ts$/, loader: 'ts-loader'
+				test: /\.tsx?$/,
+				use: 'ts-loader'
 			}
 		]
-	}
+	},
+	target: [
+		"web",
+		"es5"
+	]
 }
