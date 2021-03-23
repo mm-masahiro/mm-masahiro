@@ -4,11 +4,29 @@ type Props = {
 	name: string
 }
 
-export const Test = (props : Props) => {
+export interface Student {
+	id: number,
+	name: string,
+	height: number
+}
+
+interface SchoolProps {
+	school: string,
+	addres: string,
+}
+
+export const Test = (props : SchoolProps) => {
 	return (
 		<div>
-			<p>test</p>
-			<p>{props.name}</p>
+			<div>
+				<p>test</p>
+				{/* <p>{props.name}</p> */}
+			</div>
+			<div>
+				<div>
+					{props.school}
+				</div>
+			</div>
 		</div>
 	)
 }
