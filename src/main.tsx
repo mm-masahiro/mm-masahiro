@@ -2,6 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Student, Test } from './component/test'
 import { Tick } from './component/tick';
+import { Counter } from './component/counter'
+import { Timer } from './component/timer';
 
 const App = () => {
 	const book = {
@@ -57,7 +59,10 @@ const App = () => {
 				))}
 			</div>
 			<div>
-				{/* <Tick /> */}
+				<Counter />
+			</div>
+			<div>
+				<Timer />
 			</div>
 		</div>
 	)

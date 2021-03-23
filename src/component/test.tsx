@@ -16,6 +16,7 @@ interface SchoolProps {
 }
 
 export const Test = (props : SchoolProps) => {
+	const school = props.school
 	return (
 		<div>
 			<div>
@@ -24,11 +25,9 @@ export const Test = (props : SchoolProps) => {
 			</div>
 			<div>
 				<div>
-					{props.school}
+					{school}
 				</div>
 			</div>
 		</div>
 	)
 }
-
-// export default Test
