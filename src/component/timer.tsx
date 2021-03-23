@@ -5,7 +5,17 @@ interface AppState {
 }
 
 export const Timer = () => {
-	const [limit, setLimit] = useState(60);
+	let [limit, setLimit] = useState(60);
+
+	const start = () => {
+		setInterval(countDown, 1000)
+	}
+
+	const countDown = () => {
+		setLimit(limit -1)
+		limit = limit -1
+		console.log(limit)
+	}
 
 	return (
 		<div>
@@ -13,7 +23,7 @@ export const Timer = () => {
 				{limit}
 			</div>
 			<button>Stop</button>
-			<button>Start</button>
+			<button onClick={start}>Start</button>
 		</div>
 	)
 
