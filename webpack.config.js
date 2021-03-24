@@ -7,7 +7,8 @@ module.exports = {
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: '[name]'.js
+		filename: '[name]'.js,
+		publicPath: '/'
 	},
 	resolve: {
 		extensions: ['ts','.tsx','.js','.json']
@@ -15,7 +16,8 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname,'dist'),
 		open: true,
-		port: 3030
+		port: 3030,
+		historyApiFallback: true
 	},
 	module: {
 		rules: [

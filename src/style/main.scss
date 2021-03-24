@@ -2,8 +2,13 @@
 	&--header {
 		&__list {
 			list-style: none;
+			display: flex;
+			flex-direction: row;
 			
 			&-title {
+				padding: 20px;
+				cursor: pointer;
+
 
 			}
 		}

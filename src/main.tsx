@@ -1,10 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Student, Test } from './component/test'
 import { Tick } from './component/tick';
 import { Counter } from './component/counter'
 import { Timer } from './component/timer';
 import './style/main.scss'
+import { News } from './pages/news';
+import { Top } from './pages/top';
 
 const App = () => {
 	const book = {
@@ -45,15 +49,19 @@ const App = () => {
 		}
 	]
 	return (
-		<div className="main">
-			<header className="main--header">
-				<ul className="main--header__list">
-					<li className="main--header__list-title">Home</li>
-					<li className="main--header__list-title">News</li>
-					<li className="main--header__list-title">Tips</li>
-				</ul>
-			</header>
-		</div>
+		// <div className="main">
+		// 	<header className="main--header">
+		// 		<ul className="main--header__list">
+		// 			<li className="main--header__list-title">Home</li>
+		// 			<li className="main--header__list-title">News</li>
+		// 			<li className="main--header__list-title">Tips</li>
+		// 		</ul>
+		// 	</header>
+		// </div>
+		<Router>
+			 <Route exact path="/" component={Top}></Route>
+			 <Route exact path="/news" component={News}></Route>
+		</Router>
 	)
 }
 
