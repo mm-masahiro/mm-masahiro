@@ -10,7 +10,6 @@ export const Top = () => {
 					<li className="main--header__list-title">Home</li>
 					<li className="main--header__list-title">
 						<Link to='/news'>
-							{/* <button>News</button> */}
 							News
 						</Link>
 					</li>
