@@ -22,6 +22,19 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				use: 'ts-loader'
+			},
+			{
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							url: false
+						}
+					},
+					'sass-loader'
+				]
 			}
 		]
 	},

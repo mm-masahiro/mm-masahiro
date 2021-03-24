@@ -4,6 +4,7 @@ import { Student, Test } from './component/test'
 import { Tick } from './component/tick';
 import { Counter } from './component/counter'
 import { Timer } from './component/timer';
+import './style/main.scss'
 
 const App = () => {
 	const book = {
@@ -44,26 +45,14 @@ const App = () => {
 		}
 	]
 	return (
-		<div>
-			<h1>Hello World!!!!!!!!</h1>
-			<div>
-				{/* <Test name="Hoge" /> */}
-				<Test school='kasaoka' addres='Okayama' />
-				{book.title}
-			</div>
-			<div>
-				{sings.map(sing => (
-					<div key={sing.id}>
-						I often listen {sing.title}
-					</div>
-				))}
-			</div>
-			<div>
-				<Counter />
-			</div>
-			<div>
-				<Timer />
-			</div>
+		<div className="main">
+			<header className="main--header">
+				<ul className="main--header__list">
+					<li className="main--header__list-title">Home</li>
+					<li className="main--header__list-title">News</li>
+					<li className="main--header__list-title">Tips</li>
+				</ul>
+			</header>
 		</div>
 	)
 }
